@@ -1,2 +1,167 @@
 
-index.html
+
+  background-color: lightblue;
+  text-align: center;
+  font-family: Arial;
+}
+
+h1 {
+  color: darkblue;
+  font-size: 40px;
+}
+
+p {
+  color: green;
+  font-size: 24px;
+}button {
+  background-color: blue;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}img {
+  border-radius: 50%;
+  border: 3px solid blue;
+}nav {
+  background: #333;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: yellow;
+}body{
+    margin:0;
+    font-family:Arial;
+    background:#f2f2f2;
+    text-align:center;
+}
+
+nav{
+    background:#0066cc;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+h1{
+    color:#0066cc;
+    margin-top:30px;
+}
+
+img{
+    width:200px;
+    border-radius:50%;
+    border:5px solid #0066cc;
+}
+
+p{
+    font-size:22px;
+    color:#333;
+}
+
+button{
+    background:#0066cc;
+    color:white;
+    padding:15px 30px;
+    border:none;
+    border-radius:8px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#004c99;
+}*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#0066cc;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+}
+
+.hero{
+background:linear-gradient(#0066cc,#0099ff);
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:22px;
+margin:20px;
+}
+
+.btn{
+background:white;
+color:#0066cc;
+padding:15px 30px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:25px;
+width:300px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+text-align:center;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
