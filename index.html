@@ -1,764 +1,334 @@
-1⃣2⃣
+<!DOCTYPE html>
 <html lang="ps" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rasoolkhan.com | زما شخصي ویب‌سایت</title>
+  <title>Rasoolkhan.com | شخصي ویب‌سایت</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Tahoma, Arial, sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Tahoma, sans-serif;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        body {
-            background: #f4f8fc;
-            color: #222;
-            line-height: 1.9;
-        }
+    body {
+      background: #f4f8fc;
+      color: #222;
+      line-height: 1.8;
+    }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #0755b5, #1683e8);
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+    header {
+      background: linear-gradient(135deg, #0645a5, #1683e8);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
 
-        .logo {
-            font-size: 42px;
-            font-weight: bold;
-            direction: ltr;
-        }
+    header h1 {
+      font-size: 38px;
+      direction: ltr;
+    }
 
-        .logo span {
-            color: #ffd43b;
-        }
+    header h1 span {
+      color: #ffd21f;
+    }
 
-        header p {
-            font-size: 20px;
-            margin-top: 5px;
-        }
+    header p {
+      font-size: 20px;
+      margin-top: 5px;
+    }
 
-        /* Navigation */
-        nav {
-            background: white;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    nav {
+      background: white;
+      text-align: center;
+      padding: 18px 10px;
+      box-shadow: 0 3px 12px #00000015;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px;
-        }
+    nav a {
+      color: #0645a5;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #0755b5;
-            font-weight: bold;
-            padding: 10px 16px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
+    nav a:hover {
+      color: #f59e0b;
+    }
 
-        nav a:hover {
-            background: #0755b5;
-            color: white;
-        }
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(180deg, #eaf5ff, #ffffff);
+    }
 
-        /* Hero */
-        .hero {
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(180deg, #eaf5ff, #ffffff);
-        }
+    .hero h2 {
+      font-size: 42px;
+      color: #0645a5;
+      margin-bottom: 15px;
+    }
 
-        .hero-content {
-            max-width: 800px;
-        }
+    .hero h2 span {
+      color: #f59e0b;
+    }
 
-        .hero h1 {
-            font-size: 45px;
-            color: #0755b5;
-            margin-bottom: 10px;
-        }
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 20px;
+      color: #555;
+    }
 
-        .hero h2 {
-            color: #ff9800;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 30px;
+      background: #0754b8;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-        .hero p {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 30px;
-        }
+    .btn:hover {
+      background: #f59e0b;
+    }
 
-        .btn {
-            display: inline-block;
-            background: #0755b5;
-            color: white;
-            text-decoration: none;
-            padding: 13px 30px;
-            border-radius: 30px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+    section {
+      padding: 70px 20px;
+      text-align: center;
+    }
 
-        .btn:hover {
-            background: #ff9800;
-            transform: translateY(-3px);
-        }
+    section h2 {
+      color: #0645a5;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
 
-        /* Sections */
-        section {
-            padding: 70px 20px;
-            text-align: center;
-        }
+    .about {
+      max-width: 800px;
+      margin: auto;
+      font-size: 19px;
+      color: #555;
+    }
 
-        section h2 {
-            color: #0755b5;
-            font-size: 32px;
-            margin-bottom: 35px;
-        }
+    .cards {
+      max-width: 1000px;
+      margin: 30px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
 
-        .about {
-            background: white;
-        }
+    .card {
+      background: white;
+      width: 280px;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px #00000012;
+      transition: 0.3s;
+    }
 
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 19px;
-            color: #555;
-        }
+    .card:hover {
+      transform: translateY(-7px);
+    }
 
-        /* Services */
-        .services {
-            background: #f4f8fc;
-        }
+    .icon {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
 
-        .cards {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+    .card h3 {
+      color: #0754b8;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
 
-        .card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
+    .card p {
+      color: #666;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-        }
+    #projects {
+      background: #eaf5ff;
+    }
 
-        .card .icon {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
+    .contact {
+      max-width: 650px;
+      margin: auto;
+    }
 
-        .card h3 {
-            color: #0755b5;
-            margin-bottom: 10px;
-        }
+    .contact p {
+      font-size: 19px;
+      color: #555;
+    }
 
-        .card p {
-            color: #666;
-        }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      background: #0754b8;
+      color: white;
+      font-weight: bold;
+    }
 
-        /* Contact */
-        .contact {
-            background: white;
-        }
+    footer {
+      background: #071a35;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
 
-        .contact p {
-            font-size: 19px;
-            margin: 10px;
-        }
+    footer strong {
+      color: #ffd21f;
+    }
 
-        /* Footer */
-        footer {
-            background: #063d82;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
 
-        footer span {
-            color: #ffd43b;
-        }
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 16px;
+      }
 
-        /* Mobile */
-        @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 31px;
+      }
 
-            .logo {
-                font-size: 32px;
-            }
+      .hero p {
+        font-size: 17px;
+      }
 
-            header p {
-                font-size: 17px;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                gap: 3px;
-                padding: 10px 5px;
-            }
-
-            nav a {
-                font-size: 14px;
-                padding: 8px 10px;
-            }
-
-            .hero {
-                min-height: 450px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero h2 {
-                font-size: 26px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 50px 15px;
-            }
-
-            section h2 {
-                font-size: 27px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+      section {
+        padding: 55px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            Rasool<span>khan</span>.com
-        </div>
+  <header>
+    <h1><span>Rasool</span>khan.com</h1>
+    <p>زما شخصي ویب‌سایت</p>
+  </header>
 
-        <p>زما شخصي ویب‌سایت</p>
-    </header>
+  <nav>
+    <a href="#home">کور</a>
+    <a href="#about">زما په اړه</a>
+    <a href="#services">خدمتونه</a>
+    <a href="#projects">پروژې</a>
+    <a href="#contact">اړیکه</a>
+  </nav>
 
-    <!-- Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">کور</a></li>
-            <li><a href="#about">زما په اړه</a></li>
-            <li><a href="#services">خدمتونه</a></li>
-            <li><a href="#contact">اړیکه</a></li>
-        </ul>
-    </nav>
+  <section class="hero" id="home">
+    <h2><span>Rasoolkhan.com</span> ته ښه راغلاست!</h2>
 
-    <!-- Home -->
-    <section class="hero" id="home">
-        <div class="hero-content">
+    <p>
+      دا زما شخصي ویب‌سایت دی. دلته به زما په اړه معلومات،
+      پروژې، زده کړې او نور ګټور مطالب وګورئ.
+    </p>
 
-            <h1>Rasoolkhan.com ته ښه راغلاست!</h1>
+    <a class="btn" href="#about">نور معلومات</a>
+  </section>
 
-            <h2>زما شخصي ویب‌سایت</h2>
+  <section id="about">
+    <h2>👤 زما په اړه</h2>
 
-            <p>
-                دلته به تاسو زما په اړه معلومات،
-                زده کړې، کارونه او نورې په زړه پورې مطالب وګورئ.
-            </p>
+    <div class="about">
+      <p>
+        زه د ټکنالوژۍ، ویب‌ډیزاین او زده‌کړې سره علاقه لرم.
+        دا ویب‌سایت مې د خپلو کارونو او پروژو د ښودلو لپاره جوړ کړی دی.
+      </p>
+    </div>
+  </section>
 
-            <a class="btn" href="#about">
-                نور معلومات
-            </a>
+  <section id="services">
+    <h2>💼 خدمتونه</h2>
 
-        </div>
-    </section>
+    <div class="cards">
 
-    <!-- About -->
-    <section class="about" id="about">
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Web Design</h3>
+        <p>ښکلې او عصري ویب‌پاڼې جوړول.</p>
+      </div>
 
-        <h2>زما په اړه</h2>
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Technology</h3>
+        <p>د ټکنالوژۍ او کمپیوټر په اړه معلومات.</p>
+      </div>
 
-        <p>
-            زه رسول خان یم. دا زما شخصي ویب‌سایت دی.
-            په دې ویب‌سایت کې غواړم خپل معلومات،
-            زده کړې، تجربې او راتلونکي کارونه له تاسو سره شریک کړم.
-        </p>
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Learning</h3>
+        <p>زده‌کړې او ګټور تعلیمي مطالب.</p>
+      </div>
 
-    </section>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
+  <section id="projects">
+    <h2>🚀 زما پروژې</h2>
 
-        <h2>زما خدمتونه</h2>
+    <div class="cards">
 
-        <div class="cards">
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Rasoolkhan.com</h3>
+        <p>زما شخصي ویب‌سایت او لومړنۍ ویب پروژه.</p>
+      </div>
 
-            <div class="card">
-                <div class="icon">💻</div>
-                <h3>ویب ډیزاین</h3>
-                <p>
-                    د ښکلو او ساده ویب‌پاڼو جوړول.
-                </p>
-            </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>Technology Project</h3>
+        <p>د عصري ټکنالوژۍ اړوند پروژه.</p>
+      </div>
 
-            <div class="card">
-                <div class="icon">📚</div>
-                <h3>زده کړه</h3>
-                <p>
-                    د زده کړې او معلوماتو په برخه کې مطالب.
-                </p>
-            </div>
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Future Project</h3>
+        <p>راتلونکې کې به نورې پروژې هم دلته اضافه کړم.</p>
+      </div>
 
-            <div class="card">
-                <div class="icon">🚀</div>
-                <h3>راتلونکي پروژې</h3>
-                <p>
-                    نوې پروژې او په زړه پورې کارونه به دلته خپرېږي.
-                </p>
-            </div>
+    </div>
+  </section>
 
-        </div>
+  <section id="contact">
+    <h2>📞 اړیکه</h2>
 
-    </section>
+    <div class="contact">
+      <p>
+        که غواړې له ما سره اړیکه ونیسې، لاندې لارې وکاروه.
+      </p>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
+      <a href="mailto:your@email.com">📧 Email</a>
+    </div>
+  </section>
 
-        <h2>اړیکه</h2>
-
-        <p>📧 ایمېل: rasoolzadran6@gmail.com</p>
-
-        <p>📱 موبایل:0701366177</p>
-
-        <p>
-            که غواړئ له ما سره اړیکه ونیسئ،
-            پورته معلومات وکاروئ.
-        </p>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 <span>Rasoolkhan.com</span>
-            — ټول حقوق خوندي دي.
-        </p>
-
-    </footer>
+  <footer>
+    <p>
+      © 2026 <strong>Rasoolkhan.com</strong> — ټول حقوق خوندي دي.
+    </p>
+  </footer>
 
 </body>
-</html
-<html lang="ps" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rasoolkhan.com | زما شخصي ویب‌سایت</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Tahoma, Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #f4f8fc;
-            color: #222;
-            line-height: 1.9;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #0755b5, #1683e8);
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
-
-        .logo {
-            font-size: 42px;
-            font-weight: bold;
-            direction: ltr;
-        }
-
-        .logo span {
-            color: #ffd43b;
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 5px;
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #0755b5;
-            font-weight: bold;
-            padding: 10px 16px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #0755b5;
-            color: white;
-        }
-
-        /* Hero */
-        .hero {
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(180deg, #eaf5ff, #ffffff);
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 45px;
-            color: #0755b5;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            color: #ff9800;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #0755b5;
-            color: white;
-            text-decoration: none;
-            padding: 13px 30px;
-            border-radius: 30px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #ff9800;
-            transform: translateY(-3px);
-        }
-
-        /* Sections */
-        section {
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            color: #0755b5;
-            font-size: 32px;
-            margin-bottom: 35px;
-        }
-
-        .about {
-            background: white;
-        }
-
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 19px;
-            color: #555;
-        }
-
-        /* Services */
-        .services {
-            background: #f4f8fc;
-        }
-
-        .cards {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .card .icon {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
-
-        .card h3 {
-            color: #0755b5;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
-        }
-
-        /* Contact */
-        .contact {
-            background: white;
-        }
-
-        .contact p {
-            font-size: 19px;
-            margin: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background: #063d82;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
-
-        footer span {
-            color: #ffd43b;
-        }
-
-        /* Mobile */
-        @media (max-width: 700px) {
-
-            .logo {
-                font-size: 32px;
-            }
-
-            header p {
-                font-size: 17px;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                gap: 3px;
-                padding: 10px 5px;
-            }
-
-            nav a {
-                font-size: 14px;
-                padding: 8px 10px;
-            }
-
-            .hero {
-                min-height: 450px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero h2 {
-                font-size: 26px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 50px 15px;
-            }
-
-            section h2 {
-                font-size: 27px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            Rasool<span>khan</span>.com
-        </div>
-
-        <p>زما شخصي ویب‌سایت</p>
-    </header>
-
-    <!-- Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">کور</a></li>
-            <li><a href="#about">زما په اړه</a></li>
-            <li><a href="#services">خدمتونه</a></li>
-            <li><a href="#contact">اړیکه</a></li>
-        </ul>
-    </nav>
-
-    <!-- Home -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-
-            <h1>Rasoolkhan.com ته ښه راغلاست!</h1>
-
-            <h2>زما شخصي ویب‌سایت</h2>
-
-            <p>
-                دلته به تاسو زما په اړه معلومات،
-                زده کړې، کارونه او نورې په زړه پورې مطالب وګورئ.
-            </p>
-
-            <a class="btn" href="#about">
-                نور معلومات
-            </a>
-
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-
-        <h2>زما په اړه</h2>
-
-        <p>
-            زه رسول خان یم. دا زما شخصي ویب‌سایت دی.
-            په دې ویب‌سایت کې غواړم خپل معلومات،
-            زده کړې، تجربې او راتلونکي کارونه له تاسو سره شریک کړم.
-        </p>
-
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-
-        <h2>زما خدمتونه</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="icon">💻</div>
-                <h3>ویب ډیزاین</h3>
-                <p>
-                    د ښکلو او ساده ویب‌پاڼو جوړول.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="icon">📚</div>
-                <h3>زده کړه</h3>
-                <p>
-                    د زده کړې او معلوماتو په برخه کې مطالب.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="icon">🚀</div>
-                <h3>راتلونکي پروژې</h3>
-                <p>
-                    نوې پروژې او په زړه پورې کارونه به دلته خپرېږي.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <h2>اړیکه</h2>
-
-        <p>📧 ایمېل: rasoolzadran6@gmail.com</p>
-
-        <p>📱 موبایل:0701366177</p>
-
-        <p>
-            که غواړئ له ما سره اړیکه ونیسئ،
-            پورته معلومات وکاروئ.
-        </p>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 <span>Rasoolkhan.com</span>
-            — ټول حقوق خوندي دي.
-        </p>
-
-    </footer>
-
-</body
+</html>
