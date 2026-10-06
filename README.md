@@ -1,0 +1,8 @@
+customizations": {
+  "codespaces": {
+    "openFiles": [
+      "README.md",
+      "scripts/tsconfig.json",
+      "docs/main/CODING_STANDARDS.md"
+    ]
+  }
